@@ -39,15 +39,15 @@ TEST_CASE("ShortAnswer as Question")
   CHECK(p->getText() == "What month is Thanksgiving in? (10 pts)");
 }
 
-// TEST_CASE("ShortAnswer validate")
-// {
-//   cout << "3a: ShortAnswer validate" << endl;
-//   ShortAnswer q1("What month is Thanksgiving in?", 10, "November");
-//   CHECK(q1.validate());
+TEST_CASE("ShortAnswer validate")
+{
+  cout << "3a: ShortAnswer validate" << endl;
+  ShortAnswer q1("What month is Thanksgiving in?", 10, "November");
+  CHECK(q1.validate());
 
-//   ShortAnswer q2("", 10, "November");
-//   CHECK(!q2.validate());
-// }
+  ShortAnswer q2("", 10, "November");
+  CHECK(!q2.validate());
+}
 
 // TEST_CASE("ShortAnswer validate as question")
 // {
