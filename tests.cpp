@@ -30,14 +30,14 @@ TEST_CASE("ShortAnswer")
   // It does not have to work correctly yet - it can just return 0
 }
 
-// TEST_CASE("ShortAnswer as Question")
-// {
-//   cout << "2: ShortAnswer" << endl;
-//   ShortAnswer q1("What month is Thanksgiving in?", 10, "November");
-//   Question* p = &q1;
-//   CHECK(p->getPointValue() == 10);
-//   CHECK(p->getText() == "What month is Thanksgiving in? (10 pts)");
-// }
+TEST_CASE("ShortAnswer as Question")
+{
+  cout << "2: ShortAnswer" << endl;
+  ShortAnswer q1("What month is Thanksgiving in?", 10, "November");
+  Question* p = &q1;
+  CHECK(p->getPointValue() == 10);
+  CHECK(p->getText() == "What month is Thanksgiving in? (10 pts)");
+}
 
 // TEST_CASE("ShortAnswer validate")
 // {
