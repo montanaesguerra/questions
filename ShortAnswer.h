@@ -24,6 +24,7 @@ public:
   // matches the correctAnswer. Otherwise, 0.
   double scoreAnswer(const std::string& answer) const override;
 
+  // Return correctAnswer
   std::string getCorrectAnswer();
 };
 

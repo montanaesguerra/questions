@@ -18,11 +18,6 @@ static std::string toLower(const std::string& str)
   return result;
 }
 
-bool ShortAnswer::validate()
-{
-  return false;
-}
-
 double ShortAnswer::scoreAnswer(const std::string& answer) const
 {
   if (toLower(answer) == toLower(correctAnswer)) {
@@ -41,4 +36,10 @@ bool ShortAnswer::validate() const
 
   // Additional check: Correct Answer should not be empty
   return !correctAnswer.empty();
+}
+
+// getCorrectAnswer()
+std::string ShortAnswer::getCorrectAnswer()
+{
+  return correctAnswer;
 }
