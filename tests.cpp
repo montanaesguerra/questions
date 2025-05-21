@@ -63,14 +63,14 @@ TEST_CASE("ShortAnswer validate as question")
   CHECK(!p->validate());
 }
 
-// TEST_CASE("ShortAnswer score")
-// {
-//   cout << "4a: ShortAnswer score" << endl;
-//   ShortAnswer q1("What month is Thanksgiving in?", 8, "November");
-//   CHECK(q1.scoreAnswer("November") == Approx(8));
-//   CHECK(q1.scoreAnswer("november") == Approx(0));
-//   CHECK(q1.scoreAnswer("") == Approx(0));
-// }
+TEST_CASE("ShortAnswer score")
+{
+  cout << "4a: ShortAnswer score" << endl;
+  ShortAnswer q1("What month is Thanksgiving in?", 8, "November");
+  CHECK(q1.scoreAnswer("November") == Approx(8));
+  CHECK(q1.scoreAnswer("november") == Approx(0));
+  CHECK(q1.scoreAnswer("") == Approx(0));
+}
 
 // TEST_CASE("ShortAnswer score as Question")
 // {
