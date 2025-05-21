@@ -11,12 +11,16 @@ protected:
   int pointValue;
 
 public:
+  // Default Constructor
   Question(const std::string& promptStr, int value);
 
   int getPointValue() const;
+
   std::string getText() const;
 
   virtual double scoreAnswer(const std::string& answer) const = 0;
+
+  // Destructor
   virtual ~Question()
   {
   }
