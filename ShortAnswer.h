@@ -18,7 +18,7 @@ public:
 
   // Should if the correctAnswer is an empty string. If so, return false.
   // If not, validate it according to the same logic Question uses.
-  bool validate();
+  bool validate() const override;
 
   // Should return the point value of the question if the given answer
   // matches the correctAnswer. Otherwise, 0.

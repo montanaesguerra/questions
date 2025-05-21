@@ -18,17 +18,17 @@ using namespace std;
 #include "Question.h"
 #include "ShortAnswer.h"
 
-// TEST_CASE("ShortAnswer")
-// {
-//   cout << "1: ShortAnswer" << endl;
-//   ShortAnswer q1("Chemeketa Community _", 2, "College");
-//   CHECK(q1.getPointValue() == 2);
-//   CHECK(q1.getText() == "Chemeketa Community _ (2 pts)");
-//   CHECK(q1.getCorrectAnswer() == "College");
-//   // To compile, you also will need to make sure there is a
-//   // scoreAnswer(string) function for ShortAnswer
-//   // It does not have to work correctly yet - it can just return 0
-// }
+TEST_CASE("ShortAnswer")
+{
+  cout << "1: ShortAnswer" << endl;
+  ShortAnswer q1("Chemeketa Community _", 2, "College");
+  CHECK(q1.getPointValue() == 2);
+  CHECK(q1.getText() == "Chemeketa Community _ (2 pts)");
+  CHECK(q1.getCorrectAnswer() == "College");
+  // To compile, you also will need to make sure there is a
+  // scoreAnswer(string) function for ShortAnswer
+  // It does not have to work correctly yet - it can just return 0
+}
 
 // TEST_CASE("ShortAnswer as Question")
 // {

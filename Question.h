@@ -20,6 +20,8 @@ public:
 
   virtual double scoreAnswer(const std::string& answer) const = 0;
 
+  virtual bool validate() const;
+
   // Destructor
   virtual ~Question()
   {

@@ -22,3 +22,9 @@ std::string Question::getText() const
   oss << prompt << " (" << pointValue << " pts)";
   return oss.str();
 }
+
+// validate()
+bool Question::validate() const
+{
+  return !prompt.empty() && pointValue >= 0;
+}

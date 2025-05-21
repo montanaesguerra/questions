@@ -30,3 +30,15 @@ double ShortAnswer::scoreAnswer(const std::string& answer) const
   }
   return 0.0;
 }
+
+// Validate()
+bool ShortAnswer::validate() const
+{
+  // Call base class validate first
+  if (!Question::validate()) {
+    return false;
+  }
+
+  // Additional check: Correct Answer should not be empty
+  return !correctAnswer.empty();
+}
