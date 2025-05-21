@@ -5,12 +5,13 @@
 
 // declare NumericAnswer here
 
-class NumericAnswer: public Question {
+class NumericAnswer: public ShortAnswer {
 private:
-  double correctAnswer;
+  double allowableMargin;
 
 public:
-  NumericAnswer(const std::string& promptStr, int value, double correct);
+  NumericAnswer(const std::string& promptStr, int value,
+                const std::string& correct, double margin);
 
   double scoreAnswer(const std::string& answer) const override;
   bool validate() const override;

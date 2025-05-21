@@ -81,14 +81,14 @@ TEST_CASE("ShortAnswer score as Question")
   CHECK(p->scoreAnswer("november") == Approx(0));
 }
 
-// TEST_CASE("NumericAnswer")
-// {
-//   cout << "5: NumericAnswer" << endl;
-//   NumericAnswer q1("3 + 2", 1, "5", 0);
-//   CHECK(q1.getPointValue() == 1);
-//   CHECK(q1.getText() == "3 + 2 (1 pts)");
-//   CHECK(q1.getCorrectAnswer() == "5");
-// }
+TEST_CASE("NumericAnswer")
+{
+  cout << "5: NumericAnswer" << endl;
+  NumericAnswer q1("3 + 2", 1, "5", 0);
+  CHECK(q1.getPointValue() == 1);
+  CHECK(q1.getText() == "3 + 2 (1 pts)");
+  CHECK(q1.getCorrectAnswer() == "5");
+}
 
 // TEST_CASE("NumericAnswer score")
 // {

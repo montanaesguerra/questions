@@ -9,7 +9,7 @@
 // declare ShortAnswer here
 
 class ShortAnswer: public Question {
-private:
+protected:
   std::string correctAnswer;
 
 public:
