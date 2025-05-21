@@ -49,19 +49,19 @@ TEST_CASE("ShortAnswer validate")
   CHECK(!q2.validate());
 }
 
-// TEST_CASE("ShortAnswer validate as question")
-// {
-//   cout << "3b: ShortAnswer validate as question" << endl;
-//   ShortAnswer q1("What month is Thanksgiving in?", 10, "November");
-//   CHECK(q1.validate());
+TEST_CASE("ShortAnswer validate as question")
+{
+  cout << "3b: ShortAnswer validate as question" << endl;
+  ShortAnswer q1("What month is Thanksgiving in?", 10, "November");
+  CHECK(q1.validate());
 
-//   ShortAnswer q2("What month is Thanksgiving in?", 10, "");
-//   CHECK(!q2.validate());
+  ShortAnswer q2("What month is Thanksgiving in?", 10, "");
+  CHECK(!q2.validate());
 
-//   ShortAnswer q3("", 10, "November");
-//   Question* p = &q3;
-//   CHECK(!p->validate());
-// }
+  ShortAnswer q3("", 10, "November");
+  Question* p = &q3;
+  CHECK(!p->validate());
+}
 
 // TEST_CASE("ShortAnswer score")
 // {
