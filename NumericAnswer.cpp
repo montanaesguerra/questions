@@ -34,6 +34,10 @@ bool NumericAnswer::validate() const
     return false;
   }
 
+  if (allowableMargin < 0){
+    return false;
+  }
+
   std::istringstream iss(correctAnswer);
   double test;
   return static_cast<bool>(iss >> test);

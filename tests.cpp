@@ -104,15 +104,15 @@ TEST_CASE("NumericAnswer score")
   CHECK(q2.scoreAnswer("1.4") == Approx(0));
 }
 
-// TEST_CASE("NumericAnswer validate")
-// {
-//   cout << "7: NumericAnswer validate" << endl;
-//   NumericAnswer q1("3 + 2", 1, "5", 0);
-//   CHECK(q1.validate());
+TEST_CASE("NumericAnswer validate")
+{
+  cout << "7: NumericAnswer validate" << endl;
+  NumericAnswer q1("3 + 2", 1, "5", 0);
+  CHECK(q1.validate());
 
-//   NumericAnswer q2("3 + 2", 1, "5", -10);
-//   CHECK(!q2.validate());
-// }
+  NumericAnswer q2("3 + 2", 1, "5", -10);
+  CHECK(!q2.validate());
+}
 
 // TEST_CASE("NumericAnswer as ShortAnswer")
 // {
