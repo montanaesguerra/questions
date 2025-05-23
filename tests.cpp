@@ -114,14 +114,14 @@ TEST_CASE("NumericAnswer validate")
   CHECK(!q2.validate());
 }
 
-// TEST_CASE("NumericAnswer as ShortAnswer")
-// {
-//   cout << "8a: NumericAnswer as ShortAnswer" << endl;
-//   NumericAnswer q1("3 + 2", 1, "5", 0);
-//   ShortAnswer* p = &q1;
+TEST_CASE("NumericAnswer as ShortAnswer")
+{
+  cout << "8a: NumericAnswer as ShortAnswer" << endl;
+  NumericAnswer q1("3 + 2", 1, "5", 0);
+  ShortAnswer* p = &q1;
 
-//   CHECK(p->getCorrectAnswer() == "5");
-// }
+  CHECK(p->getCorrectAnswer() == "5");
+}
 
 // TEST_CASE("NumericAnswer as Question")
 // {
