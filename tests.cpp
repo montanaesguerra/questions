@@ -133,12 +133,12 @@ TEST_CASE("NumericAnswer as Question")
   CHECK(p->getText() == "3 + 2 (1 pts)");
 }
 
-// TEST_CASE("MultipleChoice")
-// {
-//   cout << "9a: MultipleChoice" << endl;
-//   MultipleChoice q1("Select the mammal", 5, "B");
-//   CHECK(q1.getPointValue() == 5);
-// }
+TEST_CASE("MultipleChoice")
+{
+  cout << "9a: MultipleChoice" << endl;
+  MultipleChoice q1("Select the mammal", 5, "B");
+  CHECK(q1.getPointValue() == 5);
+}
 
 // TEST_CASE("MultipleChoice setOption")
 // {
