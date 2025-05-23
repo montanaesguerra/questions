@@ -90,19 +90,19 @@ TEST_CASE("NumericAnswer")
   CHECK(q1.getCorrectAnswer() == "5");
 }
 
-// TEST_CASE("NumericAnswer score")
-// {
-//   cout << "6: NumericAnswer score" << endl;
-//   NumericAnswer q1("3 + 2", 1, "5", 0);
-//   CHECK(q1.scoreAnswer("5") == Approx(1));
-//   CHECK(q1.scoreAnswer("5.000001") == Approx(0));
+TEST_CASE("NumericAnswer score")
+{
+  cout << "6: NumericAnswer score" << endl;
+  NumericAnswer q1("3 + 2", 1, "5", 0);
+  CHECK(q1.scoreAnswer("5") == Approx(1));
+  CHECK(q1.scoreAnswer("5.000001") == Approx(0));
 
-//   NumericAnswer q2("sqrt(2)", 4, "1.414", 0.005);
-//   CHECK(q2.scoreAnswer("1.414") == Approx(4));
-//   CHECK(q2.scoreAnswer("1.41") == Approx(4));
-//   CHECK(q2.scoreAnswer("1.42") == Approx(0));
-//   CHECK(q2.scoreAnswer("1.4") == Approx(0));
-// }
+  NumericAnswer q2("sqrt(2)", 4, "1.414", 0.005);
+  CHECK(q2.scoreAnswer("1.414") == Approx(4));
+  CHECK(q2.scoreAnswer("1.41") == Approx(4));
+  CHECK(q2.scoreAnswer("1.42") == Approx(0));
+  CHECK(q2.scoreAnswer("1.4") == Approx(0));
+}
 
 // TEST_CASE("NumericAnswer validate")
 // {

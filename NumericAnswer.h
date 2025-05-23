@@ -14,6 +14,7 @@ public:
                 const std::string& correct, double margin);
 
   double scoreAnswer(const std::string& answer) const override;
+  
   bool validate() const override;
 };
 
