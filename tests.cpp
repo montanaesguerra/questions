@@ -123,15 +123,15 @@ TEST_CASE("NumericAnswer as ShortAnswer")
   CHECK(p->getCorrectAnswer() == "5");
 }
 
-// TEST_CASE("NumericAnswer as Question")
-// {
-//   cout << "8b: NumericAnswer as Question" << endl;
-//   NumericAnswer q1("3 + 2", 1, "5", 0);
-//   Question* p = &q1;
+TEST_CASE("NumericAnswer as Question")
+{
+  cout << "8b: NumericAnswer as Question" << endl;
+  NumericAnswer q1("3 + 2", 1, "5", 0);
+  Question* p = &q1;
 
-//   CHECK(p->getPointValue() == 1);
-//   CHECK(p->getText() == "3 + 2 (1 pts)");
-// }
+  CHECK(p->getPointValue() == 1);
+  CHECK(p->getText() == "3 + 2 (1 pts)");
+}
 
 // TEST_CASE("MultipleChoice")
 // {
