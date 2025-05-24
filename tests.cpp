@@ -223,12 +223,12 @@ TEST_CASE("MultipleChoice scoreAnswer partial")
   CHECK(q1.scoreAnswer("") == Approx(0));
 }
 
-// TEST_CASE("MultipleChoice scoreAnswer as Question")
-// {
-//   cout << "11c: MultipleChoice scoreAnswer as Question" << endl;
-//   MultipleChoice q1("Select the ex-Presidents", 4, "AB");
-//   Question* p = &q1;
+TEST_CASE("MultipleChoice scoreAnswer as Question")
+{
+  cout << "11c: MultipleChoice scoreAnswer as Question" << endl;
+  MultipleChoice q1("Select the ex-Presidents", 4, "AB");
+  Question* p = &q1;
 
-//   CHECK(p->scoreAnswer("B") == Approx(2));
-//   CHECK(p->scoreAnswer("BD") == Approx(0));
-// }
+  CHECK(p->scoreAnswer("B") == Approx(2));
+  CHECK(p->scoreAnswer("BD") == Approx(0));
+}
