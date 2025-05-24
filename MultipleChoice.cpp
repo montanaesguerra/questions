@@ -36,17 +36,8 @@ bool MultipleChoice::validate() const {
         return false;
     }
 
-    //Check that correct Answers is not empty
-
-    for (int i = 0; i < 4; ++i) {
-        if (options[i].empty())
-        return false;
-    }
-
     return !correctAnswers.empty();
 
-    //validate correctAnswers contains only A-D
-    //TODO
 }
 
 double MultipleChoice::scoreAnswer(const std::string& answer) const {

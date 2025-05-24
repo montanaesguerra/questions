@@ -169,24 +169,24 @@ TEST_CASE("MultipleChoice as Question")
   CHECK(p->getText() == "Select the mammal (5 pts)\nA: \nB: \nC: \nD: ");
 }
 
-// TEST_CASE("MultipleChoice validate")
-// {
-//   cout << "10a: MultipleChoice validate" << endl;
-//   MultipleChoice q1("Select the mammal", 5, "B");
-//   CHECK(q1.validate());
+TEST_CASE("MultipleChoice validate")
+{
+  cout << "10a: MultipleChoice validate" << endl;
+  MultipleChoice q1("Select the mammal", 5, "B");
+  CHECK(q1.validate());
 
-//   MultipleChoice q2("Select the mammal", 5, "");
-//   CHECK(!q2.validate());
+  MultipleChoice q2("Select the mammal", 5, "");
+  CHECK(!q2.validate());
 
-//   MultipleChoice q3("Select the fruit", 5, "AC");
-//   CHECK(q3.validate());
+  MultipleChoice q3("Select the fruit", 5, "AC");
+  CHECK(q3.validate());
 
-//   MultipleChoice q4("Select the fruit", -1, "AC");
-//   CHECK(!q4.validate());
+  MultipleChoice q4("Select the fruit", -1, "AC");
+  CHECK(!q4.validate());
 
-//   MultipleChoice q5("", 5, "AC");
-//   CHECK(!q5.validate());
-// }
+  MultipleChoice q5("", 5, "AC");
+  CHECK(!q5.validate());
+}
 
 // TEST_CASE("MultipleChoice validate as Question")
 // {
