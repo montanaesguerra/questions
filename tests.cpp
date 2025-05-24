@@ -159,15 +159,15 @@ TEST_CASE("MultipleChoice setOption")
   CHECK(q1.getText() == correctText);
 }
 
-// TEST_CASE("MultipleChoice as Question")
-// {
-//   cout << "9c: MultipleChoice" << endl;
-//   MultipleChoice q1("Select the mammal", 5, "B");
-//   Question* p = &q1;
+TEST_CASE("MultipleChoice as Question")
+{
+  cout << "9c: MultipleChoice" << endl;
+  MultipleChoice q1("Select the mammal", 5, "B");
+  Question* p = &q1;
 
-//   CHECK(p->getPointValue() == 5);
-//   CHECK(p->getText() == "Select the mammal (5 pts)\nA: \nB: \nC: \nD: ");
-// }
+  CHECK(p->getPointValue() == 5);
+  CHECK(p->getText() == "Select the mammal (5 pts)\nA: \nB: \nC: \nD: ");
+}
 
 // TEST_CASE("MultipleChoice validate")
 // {
