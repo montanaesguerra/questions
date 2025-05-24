@@ -200,14 +200,14 @@ TEST_CASE("MultipleChoice validate as Question")
   CHECK(!p2->validate());
 }
 
-// TEST_CASE("MultipleChoice scoreAnswer")
-// {
-//   cout << "11a: MultipleChoice scoreAnswer" << endl;
-//   MultipleChoice q1("Select the mammal", 5, "B");
-//   CHECK(q1.scoreAnswer("B") == Approx(5));
-//   CHECK(q1.scoreAnswer("BC") == Approx(0));
-//   CHECK(q1.scoreAnswer("C") == Approx(0));
-// }
+TEST_CASE("MultipleChoice scoreAnswer")
+{
+  cout << "11a: MultipleChoice scoreAnswer" << endl;
+  MultipleChoice q1("Select the mammal", 5, "B");
+  CHECK(q1.scoreAnswer("B") == Approx(5));
+  CHECK(q1.scoreAnswer("BC") == Approx(0));
+  CHECK(q1.scoreAnswer("C") == Approx(0));
+}
 
 // TEST_CASE("MultipleChoice scoreAnswer partial")
 // {
