@@ -209,19 +209,19 @@ TEST_CASE("MultipleChoice scoreAnswer")
   CHECK(q1.scoreAnswer("C") == Approx(0));
 }
 
-// TEST_CASE("MultipleChoice scoreAnswer partial")
-// {
-//   cout << "11b: MultipleChoice scoreAnswer partial" << endl;
-//   MultipleChoice q1("Select the mammals", 6, "ABC");
-//   CHECK(q1.scoreAnswer("B") == Approx(2));
-//   CHECK(q1.scoreAnswer("C") == Approx(2));
-//   CHECK(q1.scoreAnswer("BCD") == Approx(2));
-//   CHECK(q1.scoreAnswer("BC") == Approx(4));
-//   CHECK(q1.scoreAnswer("ABC") == Approx(6));
-//   CHECK(q1.scoreAnswer("ABCD") == Approx(4));
-//   CHECK(q1.scoreAnswer("AD") == Approx(0));
-//   CHECK(q1.scoreAnswer("") == Approx(0));
-// }
+TEST_CASE("MultipleChoice scoreAnswer partial")
+{
+  cout << "11b: MultipleChoice scoreAnswer partial" << endl;
+  MultipleChoice q1("Select the mammals", 6, "ABC");
+  CHECK(q1.scoreAnswer("B") == Approx(2));
+  CHECK(q1.scoreAnswer("C") == Approx(2));
+  CHECK(q1.scoreAnswer("BCD") == Approx(2));
+  CHECK(q1.scoreAnswer("BC") == Approx(4));
+  CHECK(q1.scoreAnswer("ABC") == Approx(6));
+  CHECK(q1.scoreAnswer("ABCD") == Approx(4));
+  CHECK(q1.scoreAnswer("AD") == Approx(0));
+  CHECK(q1.scoreAnswer("") == Approx(0));
+}
 
 // TEST_CASE("MultipleChoice scoreAnswer as Question")
 // {

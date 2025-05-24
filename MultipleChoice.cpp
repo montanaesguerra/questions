@@ -41,8 +41,31 @@ bool MultipleChoice::validate() const {
 }
 
 double MultipleChoice::scoreAnswer(const std::string& answer) const {
-    if (answer == correctAnswers)
-        return pointValue;
     
-    return 0.0;
+    double pointsPerCorrect = pointValue / correctAnswers.size();
+    double score = 0.0;
+
+    for (char c : answer) {
+        
+        if (correctAnswers.find(c) != std::string::npos) {
+            score += pointsPerCorrect;
+        }
+
+        else {
+            score -= pointsPerCorrect;
+        }
+    }
+
+
+    // Check if score goes below 0 : give 0 points
+    if (score < 0) {
+        return 0.0;
+    }
+
+    // Check if there are no correct answers
+    if ( correctAnswers.size() == 0) {
+        return 0.0;
+    }
+
+    return score;
 }
