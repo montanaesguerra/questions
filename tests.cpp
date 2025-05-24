@@ -188,17 +188,17 @@ TEST_CASE("MultipleChoice validate")
   CHECK(!q5.validate());
 }
 
-// TEST_CASE("MultipleChoice validate as Question")
-// {
-//   cout << "10b: MultipleChoice validate as Question" << endl;
-//   MultipleChoice q1("Select the mammal", 5, "B");
-//   Question* p1 = &q1;
-//   CHECK(p1->validate());
+TEST_CASE("MultipleChoice validate as Question")
+{
+  cout << "10b: MultipleChoice validate as Question" << endl;
+  MultipleChoice q1("Select the mammal", 5, "B");
+  Question* p1 = &q1;
+  CHECK(p1->validate());
 
-//   MultipleChoice q2("Select the mammal", 5, "");
-//   Question* p2 = &q2;
-//   CHECK(!p2->validate());
-// }
+  MultipleChoice q2("Select the mammal", 5, "");
+  Question* p2 = &q2;
+  CHECK(!p2->validate());
+}
 
 // TEST_CASE("MultipleChoice scoreAnswer")
 // {
