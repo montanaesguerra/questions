@@ -140,24 +140,24 @@ TEST_CASE("MultipleChoice")
   CHECK(q1.getPointValue() == 5);
 }
 
-// TEST_CASE("MultipleChoice setOption")
-// {
-//   cout << "9b: MultipleChoice" << endl;
-//   MultipleChoice q1("Select the mammal", 5, "B");
+TEST_CASE("MultipleChoice setOption")
+{
+  cout << "9b: MultipleChoice" << endl;
+  MultipleChoice q1("Select the mammal", 5, "B");
 
-//   q1.setOption(0, "Shark");
-//   q1.setOption(1, "Dolphin");
-//   q1.setOption(2, "Eel");
-//   q1.setOption(3, "Squid");
+  q1.setOption(0, "Shark");
+  q1.setOption(1, "Dolphin");
+  q1.setOption(2, "Eel");
+  q1.setOption(3, "Squid");
 
-//   string correctText = "Select the mammal (5 pts)";
-//   correctText += "\nA: Shark";
-//   correctText += "\nB: Dolphin";
-//   correctText += "\nC: Eel";
-//   correctText += "\nD: Squid";
+  string correctText = "Select the mammal (5 pts)";
+  correctText += "\nA: Shark";
+  correctText += "\nB: Dolphin";
+  correctText += "\nC: Eel";
+  correctText += "\nD: Squid";
 
-//   CHECK(q1.getText() == correctText);
-// }
+  CHECK(q1.getText() == correctText);
+}
 
 // TEST_CASE("MultipleChoice as Question")
 // {

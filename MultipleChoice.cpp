@@ -1,3 +1,4 @@
+
 #include "MultipleChoice.h"
 
 MultipleChoice::MultipleChoice(const std::string& promptStr, int point,
@@ -16,16 +17,17 @@ void MultipleChoice::setOption(int index, const std::string& option) {
     }
 }
 
-// std::string MultipleChoice::getText() const {
-//     std::string text = getPrompt() + "\n";
-//     char label = 'A';
-//     for (int i = 0; i < 4; ++i) {
-//         text += label;
-//         text += ": " + options[i] + "\n";
-//         ++label;
-//     }
-//     return text;
-// }
+std::string MultipleChoice::getText() const{
+    std::string finalText = Question::getText();
+
+    for (int i = 0; i < 4; ++i) {
+        char label = 'A' + i;
+        finalText += "\n";
+        finalText += label;
+        finalText += ": " + options[i];
+    }
+    return finalText;
+}
 
 bool MultipleChoice::validate() const {
 

@@ -21,7 +21,7 @@ class MultipleChoice: public Question {
     MultipleChoice(const std::string& promptStr, int pointValue,
     const std::string& correctChoices);
 
-    // std::string getText() const;
+    std::string getText() const override;
 
     bool validate() const override;
 

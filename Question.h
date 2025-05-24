@@ -16,7 +16,7 @@ public:
 
   int getPointValue() const;
 
-  std::string getText() const;
+  virtual std::string getText() const;
 
   virtual double scoreAnswer(const std::string& answer) const = 0;
 
